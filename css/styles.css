@@ -1,0 +1,211 @@
+/* GENERAL STYLES */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+a {
+  color: #000;
+  transition: .3s;
+}
+a:hover {
+  text-decoration: none;
+  color: #5d5d5d;
+}
+button {
+  background-color: #343a40;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+}
+.divider {
+  width: 1px;
+  height: 20px;
+  margin: auto 10px;
+  background-color: #000;
+}
+hr {
+  margin: 50px 0;
+}
+.card, .card-img-top {
+  border-radius: 0;
+}
+.table .center {
+  text-align: center;
+}
+.table .right {
+  text-align: right;
+}
+i {
+  cursor: pointer;
+}
+/******* HOME *******/
+/* HEADER */
+header {
+  height: 300px;
+  background-image: url('https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+header h1 {
+  color: #fff;
+}
+/* NAV */
+.navbar .navbar-brand {
+  font-weight: bold;
+}
+.navbar li a {
+  font-weight: 600;
+  position: relative;
+}
+/* MAIN */
+main {
+  padding: 50px 0;
+}
+main .list-group p.title{
+  font-weight: bold;
+}
+main .list-group-item {
+  background-color: transparent;
+  border: 0;
+}
+main .list-group-item:first-child, main .list-group-item:last-child {
+  border-radius: 0;
+}
+main .card h4 a {
+  color: #171822;
+  font-size: 16px;
+}
+main .card h5 {
+  color: #637282;
+  font-size: 15px;
+}
+/* footer */
+footer {
+  padding: 20px 0;
+}
+/******** PRODUCT *******/
+.product h2 {
+  font-size: 32px;
+}
+.product h5 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #637282;
+}
+.product button {
+  margin-top: 10px;
+}
+/******** LOGIN ********/
+.login {
+  background-image: url('https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+}
+.login main {
+  min-height: calc(100vh - 56px);
+}
+.login-form {
+  max-width: 500px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+/******** CART ********/
+.cart main {
+  min-height: 65vh;
+}
+.cart table img{
+  max-width: 70px;
+}
+.cart table td {
+  vertical-align: middle;
+}
+.cart .total {
+  float: right;
+  text-align: right;
+  padding-top: 30px;
+  border-top: 1px solid;
+  margin-top: 10px;
+}
+.cart .total p {
+  font-weight: 600;
+  font-size: 20px;
+}
+/****** ADMIN **********/
+.admin .navbar {
+  border-bottom: 1px solid;
+  margin-bottom: 30px;
+}
+.admin .list-group .active {
+  position: relative;
+}
+.admin .list-group .active::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 16px;
+}
+.admin .admin-action-button {
+  margin-top: 20px;
+}
+.admin .group-finder {
+  text-align: right;
+  float: right;
+  margin-top: 20px;
+}
+.admin .group-finder input {
+  margin-bottom: 0;
+  max-width: 200px;
+}
+.admin .group-finder p {
+  margin: 10px 0;
+  font-weight: 500;
+}
+.action p {
+  font-weight: bold;
+}
+.action label {
+  min-width: 100px;
+}
+/* media queries*/
+@media (max-width: 991px) {
+  .divider {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .nav-item .nav-link {
+    margin: 10px;
+    padding: 0;
+  }
+  .navbar li.active a::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    background-color: #000;
+  }
+  .login-form{
+     margin-top: 100px;
+   }
+}
+
+

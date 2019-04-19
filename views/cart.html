@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Koszyk</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body class="cart">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">Logo sklepu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Strona główna</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/cart">
+              Koszyk
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Logowanie</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Koszyk</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Zdjęcie</th>
+                <th scope="col">Nazwa produktu</th>
+                <th scope="col" class="center">Usuń</th>
+                <th scope="col" class="right">Cena</th>
+              </tr>
+            </thead>
+            <tbody id="cart"></tbody>
+          </table>
+          <div class="total">
+            <p>Total: <span>_____</span></p>
+            <button id="add-order">Zamów</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+  </footer>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../build/src/scripts/endpoints.js"></script>
+  <script src="../build/src/scripts/cart.js"></script>
+</body>
+
+</html>

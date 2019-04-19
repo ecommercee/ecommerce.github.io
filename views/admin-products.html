@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Admin - produkty</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body class="admin">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">Logo sklepu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Strona główna</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group">
+            <p class="title">Menu</p>
+            <a class="nav-link active" href="/admin-products">Produkty</a>
+            <a class="nav-link" href="/admin-products-group">Grupy produktów</a>
+            <a class="nav-link" href="/admin-orders">Zamówienia</a>
+            <a class="nav-link" href="/admin-users">Użytkownicy</a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Produkt</th>
+                <th scope="col" class="center">Cena</th>
+                <th scope="col" class="center">Grupa</th>
+              </tr>
+            </thead>
+            <tbody id="products-list"></tbody>
+          </table>
+          <hr>
+          <div class="action">
+            <p>Dodaj nowy produkt</p>
+            <div class="form-group">
+              <label for="">nazwa</label>
+              <input id="name" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">opis</label>
+              <input id="description" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">cena</label>
+              <input id="price" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">grupa</label>
+              <input id="group" type="text" class="form-control">
+            </div>
+            <button id="add-product" class="admin-action-button">Dodaj nowy</button>
+          </div>
+          <hr>
+          <div class="action">
+            <p>Edytuj produkt</p>
+            <div class="form-group">
+              <label for="">id</label>
+              <input id="edit-id" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">nazwa</label>
+              <input id="edit-name" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">opis</label>
+              <input id="edit-description" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">cena</label>
+              <input id="edit-price" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">grupa</label>
+              <input id="edit-group" type="text" class="form-control">
+            </div>
+            <button id="edit-product" class="admin-action-button">Edytuj dane</button>
+          </div>
+          <hr>
+          <div class="action">
+            <p>Usuń produkt</p>
+            <div class="form-group">
+              <label for="">id</label>
+              <input id="delete-id" type="text" class="form-control">
+            </div>
+            <button id="delete-product" class="admin-action-button">Usuń</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../build/src/scripts/endpoints.js"></script>
+  <script src="../build/src/scripts/products.js"></script>
+</body>
+
+</html>
