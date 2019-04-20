@@ -2,7 +2,7 @@
 
 //CREATE PRODUCT LIST HOME
 function createProductList() {
-    fetch('http://localhost:8080/v1/product/getProducts').then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/getProducts').then(function (response) {
         return response.json();
     }).then(function (productsList) {
         var html = '';

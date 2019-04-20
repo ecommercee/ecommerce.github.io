@@ -4,7 +4,7 @@
 function displayProductsFromCategory() {
     var parts = document.URL.split('/');
     var activeId = Number(parts[parts.length - 1]);
-    fetch('http://localhost:8080/v1/group/getGroup' + '?groupId=' + activeId).then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/getGroup' + '?groupId=' + activeId).then(function (response) {
         return response.json();
     }).then(function (productsList) {
         var html = '';

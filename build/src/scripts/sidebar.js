@@ -2,7 +2,7 @@
 
 //CREATE LEFT SIDEBAR HOME
 function displaySidebar() {
-    fetch('http://localhost:8080/v1/group/getGroups').then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/getGroups').then(function (response) {
         return response.json();
     }).then(function (productsGroups) {
         var html = '';

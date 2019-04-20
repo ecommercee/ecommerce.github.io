@@ -2,7 +2,7 @@
 
 //GET PRODUCT LIST
 function createProductList() {
-    fetch('http://localhost:8080/v1/product/getProducts').then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/getProducts').then(function (response) {
         return response.json();
     }).then(function (productsList) {
         var html = '';
@@ -23,7 +23,7 @@ function createProduct(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/product/createProduct', options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/createProduct', options).then(function (response) {
         return response.json;
     });
 }
@@ -46,7 +46,7 @@ function editProduct(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/product/updateProduct' + '/' + data.id, options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/updateProduct' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }
@@ -71,7 +71,7 @@ function deleteProduct(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/product/deleteProduct' + '/' + data.id, options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/deleteProduct' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }

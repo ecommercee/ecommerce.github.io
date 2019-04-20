@@ -2,21 +2,21 @@
 
 var endpoints = {
     cart: {
-        url: 'http://localhost:8080/v1/cart'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/cart'
     },
     orders: {
-        url: 'http://localhost:8080/v1/order'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/order'
     },
     login: {
-        url: 'http://localhost:4000/login'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/login'
     },
     products: {
-        url: 'http://localhost:8080/v1/product'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/product'
     },
     groups: {
-        url: 'http://localhost:8080/v1/group'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/group'
     },
     users: {
-        url: 'http://localhost:4000/v1/user'
+        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/user'
     }
 };

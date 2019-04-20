@@ -2,7 +2,7 @@
 
 //GET PRODUCT GROUP LIST
 function createProductGroupList() {
-    fetch('http://localhost:8080/v1/group/getGroup').then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/getGroup').then(function (response) {
         return response.json();
     }).then(function (productsGroups) {
         var html = '';
@@ -23,7 +23,7 @@ function createGroup(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/group/createGroup', options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/createGroup', options).then(function (response) {
         return response.json;
     });
 }
@@ -43,7 +43,7 @@ function editGroup(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/group/updateGroup' + '/' + data.id, options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/updateGroup' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }

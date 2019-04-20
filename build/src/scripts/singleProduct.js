@@ -5,7 +5,7 @@ var parts = document.URL.split('/');
 var activeID = Number(parts[parts.length - 1]);
 
 function createProductList() {
-    fetch('http://localhost:8080/v1/product/getProduct' + '/' + activeID).then(function (response) {
+    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/getProduct' + '/' + activeID).then(function (response) {
         return response.json();
     }).then(function (productsList) {
         var html = '';
@@ -29,7 +29,7 @@ function addCart(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('http://localhost:8080/v1/cart/addItemToCart', options).then(function (response) {
+    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/addItemToCart', options).then(function (response) {
         return response.json;
     });
 }
