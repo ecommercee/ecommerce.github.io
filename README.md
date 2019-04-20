@@ -1,2 +1,2 @@
-# ecommerce.github.io
+# ecommercee.github.io
 front to ecommercee
