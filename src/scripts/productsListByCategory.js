@@ -2,7 +2,7 @@
 function displayProductsFromCategory() {
     let parts = document.URL.split('/');
     let activeId = Number(parts[parts.length - 1]);
-    fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/group/getGroup'}?groupId=${activeId}`)
+    fetch(`${'http://localhost:8080/v1/group/getGroup'}?groupId=${activeId}`)
         .then(function (response) {
             return response.json();
         })

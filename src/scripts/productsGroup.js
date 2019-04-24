@@ -1,6 +1,6 @@
 //GET PRODUCT GROUP LIST
 function createProductGroupList() {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/getGroup')
+    fetch('http://localhost:8080/v1/group/getGroup')
         .then(function (response) {
             return response.json();
         })
@@ -28,7 +28,7 @@ function createGroup(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/group/createGroup', options)
+    return fetch('http://localhost:8080/v1/group/createGroup', options)
         .then((response) => response.json)
 }
 
@@ -47,7 +47,7 @@ function editGroup(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/group/updateGroup'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/group/updateGroup'}/${data.id}`, options)
         .then((response) => response.json)
 }
 

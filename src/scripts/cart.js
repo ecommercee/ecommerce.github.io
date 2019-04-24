@@ -1,6 +1,6 @@
 // GET CART PRODUCTS
 function createProductList() {
-    fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/cart/getProductsFromCart'}`)
+    fetch(`${'http://localhost:8080/v1/cart/getProductsFromCart'}`)
         .then(function (response) {
             return response.json();
         })
@@ -43,13 +43,13 @@ function deleteOrder(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/cart/deleteItemFromCart'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/cart/deleteItemFromCart'}/${data.id}`, options)
         .then((response) => response.json)
 }
 
 //MAKE ORDER FROM CART
 document.getElementById('add-order').addEventListener("click", function () {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/createOrder')
+    fetch('http://localhost:8080/v1/cart/createOrder')
         .then(function (response) {
             return response.json();
         })
@@ -71,6 +71,6 @@ function addNewOrder(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/createOrder', options)
+    return fetch('http://localhost:8080/v1/order/createOrder', options)
         .then((response) => response.json)
 }

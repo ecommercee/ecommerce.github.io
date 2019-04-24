@@ -30,7 +30,7 @@ function createUser(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/user/createUser', options)
+    return fetch('http://localhost:8080/v1/user/createUser', options)
         .then((response) => response.json)
 }
 
@@ -51,7 +51,7 @@ function blockUser(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/user/badUser'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/user/badUser'}/${data.id}`, options)
         .then((response) => response.json)
 }
 
@@ -71,7 +71,7 @@ function keyGenerator(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/user/getToken'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/user/getToken'}/${data.id}`, options)
         .then((response) => response.json)
 }
 

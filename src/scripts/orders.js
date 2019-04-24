@@ -1,6 +1,6 @@
 //GET ORDERS
 function createOrdersList() {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/getOrders')
+    fetch('http://localhost:8080/v1/order/getOrders')
         .then(function (response) {
             return response.json();
         })
@@ -29,7 +29,7 @@ function deleteOrder(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/order/deleteOrder'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/order/deleteOrder'}/${data.id}`, options)
         .then((response) => response.json)
 }
 
@@ -48,7 +48,7 @@ function editOrder(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/order/updateOrder'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/order/updateOrder'}/${data.id}`, options)
         .then((response) => response.json)
 }
 

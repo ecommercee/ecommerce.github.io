@@ -2,7 +2,7 @@
 
 // GET CART PRODUCTS
 function createProductList() {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/getProductsFromCart').then(function (response) {
+    fetch('http://localhost:8080/v1/cart/getProductsFromCart').then(function (response) {
         return response.json();
     }).then(function (productsList) {
         var html = '';
@@ -35,14 +35,14 @@ function deleteOrder(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/deleteItemFromCart' + '/' + data.id, options).then(function (response) {
+    return fetch('http://localhost:8080/v1/cart/deleteItemFromCart' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }
 
 //MAKE ORDER FROM CART
 document.getElementById('add-order').addEventListener("click", function () {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/createOrder').then(function (response) {
+    fetch('http://localhost:8080/v1/cart/createOrder').then(function (response) {
         return response.json();
     }).then(function (cartItems) {
         var tab = [];
@@ -62,7 +62,7 @@ function addNewOrder(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/createOrder', options).then(function (response) {
+    return fetch('http://localhost:8080/v1/order/createOrder', options).then(function (response) {
         return response.json;
     });
 }

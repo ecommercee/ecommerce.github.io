@@ -1,6 +1,6 @@
 //GET PRODUCT LIST
 function createProductList() {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/getProducts')
+    fetch('http://localhost:8080/v1/product/getProducts')
         .then(function (response) {
             return response.json();
         })
@@ -30,7 +30,7 @@ function createProduct(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/product/createProduct', options)
+    return fetch('http://localhost:8080/v1/product/createProduct', options)
         .then((response) => response.json)
 }
 
@@ -52,7 +52,7 @@ function editProduct(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/product/updateProduct'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/product/updateProduct'}/${data.id}`, options)
         .then((response) => response.json)
 }
 
@@ -76,7 +76,7 @@ function deleteProduct(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/product/deleteProduct'}/${data.id}`, options)
+    return fetch(`${'http://localhost:8080/v1/product/deleteProduct'}/${data.id}`, options)
         .then((response) => response.json)
 }
 

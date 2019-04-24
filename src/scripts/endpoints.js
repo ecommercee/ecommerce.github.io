@@ -1,20 +1,20 @@
 const endpoints = {
     cart: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/cart'
+        url: 'http://localhost:8080/v1/cart'
     },
     orders: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/order'
+        url: 'http://localhost:8080/v1/order'
     },
     login: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/login'
+        url: 'http://localhost:4000/login'
     },
     products: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/product'
+        url: 'http://localhost:8080/v1/product'
     },
     groups: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/group'
+        url: 'http://localhost:8080/v1/group'
     },
     users: {
-        url: 'https://infinite-hamlet-99648.herokuapp.com/v1/user'
+        url: 'http://localhost:8080/v1/user'
     }
 };

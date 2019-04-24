@@ -2,7 +2,7 @@
 
 //GET ORDERS
 function createOrdersList() {
-    fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/getOrders').then(function (response) {
+    fetch('http://localhost:8080/v1/order/getOrders').then(function (response) {
         return response.json();
     }).then(function (ordersList) {
         var html = '';
@@ -23,7 +23,7 @@ function deleteOrder(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/deleteOrder' + '/' + data.id, options).then(function (response) {
+    return fetch('http://localhost:8080/v1/order/deleteOrder' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }
@@ -43,7 +43,7 @@ function editOrder(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/order/updateOrder' + '/' + data.id, options).then(function (response) {
+    return fetch('http://localhost:8080/v1/order/updateOrder' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }

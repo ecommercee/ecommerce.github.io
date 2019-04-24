@@ -23,7 +23,7 @@ function createUser(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/user/createUser', options).then(function (response) {
+    return fetch('http://localhost:8080/v1/user/createUser', options).then(function (response) {
         return response.json;
     });
 }
@@ -45,7 +45,7 @@ function blockUser(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/user/badUser' + '/' + data.id, options).then(function (response) {
+    return fetch('http://localhost:8080/v1/user/badUser' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }
@@ -66,7 +66,7 @@ function keyGenerator(data) {
         },
         body: JSON.stringify(data)
     };
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/user/getToken' + '/' + data.id, options).then(function (response) {
+    return fetch('http://localhost:8080/v1/user/getToken' + '/' + data.id, options).then(function (response) {
         return response.json;
     });
 }

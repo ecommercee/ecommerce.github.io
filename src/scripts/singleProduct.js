@@ -3,7 +3,7 @@ let parts = document.URL.split('/');
 let activeID = Number(parts[parts.length - 1]);
 
 function createProductList() {
-    fetch(`${'https://infinite-hamlet-99648.herokuapp.com/v1/product/getProduct'}/${activeID}`)
+    fetch(`${'http://localhost:8080/v1/product/getProduct'}/${activeID}`)
         .then(function (response) {
             return response.json();
         })
@@ -33,7 +33,7 @@ function addCart(data) {
         },
         body: JSON.stringify(data)
     }
-    return fetch('https://infinite-hamlet-99648.herokuapp.com/v1/cart/addItemToCart', options)
+    return fetch('http://localhost:8080/v1/cart/addItemToCart', options)
         .then((response) => response.json)
 }
 
